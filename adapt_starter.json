@@ -1,0 +1,8 @@
+{
+    "name": "moviedb-react-node",
+    "files": [
+        "backend",
+        "deploy",
+        "frontend"
+    ]
+}
