@@ -13,7 +13,7 @@ steps:
 
 # Run Adapt
   - id: 'deploy'
-    name: 'gcr.io/devops3-analiza/loai-adapt'
+    name: 'gcr.io/devops3-analiza'
     entrypoint: 'adapt' 
     env: 
     - 'KUBECONFIG=gcr.io/devops3-analiza'
