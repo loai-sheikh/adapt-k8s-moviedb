@@ -10,7 +10,6 @@ steps:
           npm install -g @adpt/cli
           gcloud container clusters get-credentials loai-production-cluster --zone europe-west1
           gcloud auth configure-docker --quiet
-          cd moviedb/deploy
           export KUBE_DOCKER_REPO=gcr.io/devops3-analiza 
           
 
