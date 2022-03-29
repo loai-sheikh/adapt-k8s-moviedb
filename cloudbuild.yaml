@@ -19,7 +19,7 @@ steps:
     entrypoint: 'adapt' 
     env: 
     - 'KUBECONFIG=gcr.io/devops3-analiza'
-    - 'KUBE_DOCKER_REPO=gcr.io/devops3-analiza/app/movieapp-production'
+    - 'KUBE_DOCKER_REPO=gcr.io/devops3-analiza'
     # args: ['run','k8s-test','--deployID','movieapp-production']
     args: ['update','movieapp-production']
     dir: 'deploy'
