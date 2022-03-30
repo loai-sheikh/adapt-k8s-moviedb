@@ -10,16 +10,17 @@ steps:
           npm install -g @adpt/cli
           gcloud container clusters get-credentials loai-production-cluster --zone europe-west1
           gcloud auth configure-docker --quiet
-          export KUBE_DOCKER_REPO=gcr.io/devops3-analiza 
+          export MYPROJECTID=devops3-analiza
+          export KUBE_DOCKER_REPO=gcr.io/${MYPROJECTID}/movie_db_production
           
 
 # Run Adapt
   - id: 'deploy'
-    name: 'gcr.io/devops3-analiza'
+    name: 'gcr.io/devops3-analiza/movie_db_production'
     entrypoint: 'adapt' 
     env: 
-    - 'KUBECONFIG=gcr.io/devops3-analiza'
-    - 'KUBE_DOCKER_REPO=gcr.io/devops3-analiza'
+    - 'KUBECONFIG=gcr.io/devops3-analiza/movie_db_production'
+    - 'KUBE_DOCKER_REPO=gcr.io/devops3-analiza/movie_db_production'
     # args: ['run','k8s-test','--deployID','movieapp-production']
     args: ['update','movieapp-production']
     dir: 'deploy'

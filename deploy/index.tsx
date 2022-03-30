@@ -13,7 +13,7 @@ function App() {
     return <Group>
 
         <UrlRouter
-            port={8080}
+            port={80}
             routes={[
                 { path: "/api/", endpoint: api },
                 { path: "/", endpoint: app }

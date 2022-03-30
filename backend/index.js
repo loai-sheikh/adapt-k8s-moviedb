@@ -2,7 +2,7 @@ const express = require('express');
 const moviedb = require('./moviedb');
 
 let port = Number(process.env.HTTP_PORT);
-if (isNaN(port)) port = 8080;
+if (isNaN(port)) port = 80;
 
 const app = express();
 app.use(express.json());
